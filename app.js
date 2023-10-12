@@ -44,4 +44,10 @@ mushrooms.forEach(function(flavor) {
     console.log(flavor);
   });
 
+//const tasty = mushrooms.filter((mushrooms) => mushrooms.flavor === "savory");
 
+const tasty = mushrooms.filter(mushroom => {
+    return mushroom.flavor.includes("savory");
+  });
+
+tasty.forEach((tasty) => console.log(tasty.name, tasty.flavor));
