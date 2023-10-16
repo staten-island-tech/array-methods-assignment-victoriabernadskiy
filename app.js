@@ -40,14 +40,17 @@ const Morel = {
 let mushrooms=[Enoki, Portobello, Shiitake, Chanterelle, Morel]
 
 mushrooms.forEach((mushrooms) => console.log(mushrooms.name));
-mushrooms.forEach(function(flavor) {
-    console.log(flavor);
-  });
+mushrooms.forEach(mushrooms => {
+    const flavorful = mushrooms.flavor;
+    flavorful.forEach(el => {
+        console.log(el);
+    })
+})
 
 //const tasty = mushrooms.filter((mushrooms) => mushrooms.flavor === "savory");
 
-const tasty = mushrooms.filter(mushroom => {
+const flavorful = mushrooms.filter(mushroom => {
     return mushroom.flavor.includes("savory");
   });
 
-tasty.forEach((tasty) => console.log(tasty.name, tasty.flavor));
+flavorful.forEach((flavorful) => console.log(flavorful.name, flavorful.flavor));
